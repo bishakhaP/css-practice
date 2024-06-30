@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.outer{
+    height: 100vh;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#switch:checked ~ .outer{
+    background: #072332;
+}
+
+.outer .content{
+    display: flex;
+    width: 570px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+#switch:checked ~ .outer .content{
+    background: #092c3e;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content .toggle{
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 40px;
+    height: 20px;
+    background: #092c3e;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+#switch:checked ~ .outer .toggle{
+    background: #fff;
+}
+
+.toggle .circle{
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 3px;
+    transition: all 0.3s ease;
+}
+
+#switch:checked ~ .outer .circle{
+    margin-left: 22px;
+    background: #092c3e;
+}
+
+.content .image-box{
+    height: 232px;
+    width: 200px;
+    border-radius: 12px;
+    padding: 3px;
+    background-color: #092c3e;
+}
+
+.content .image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #fff;
+}
+
+#switch:checked ~ .outer .image-box{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+#switch:checked ~ .outer .image-box img{
+    transition: 0.1s ease;
+    border-color: transparent;
+  }
+
+.content .details{
+    width: 58%;
+    margin: 10px 0 20px 20px;
+}
+
+#switch:checked ~ .outer .content .details{
+    transition: 0.1s;
+    color: #fff;
+}
+
+.content .details .name{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.content .details .job{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content .details p{
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.content .details button{
+    font-size: 17px;
+    display: block;
+    outline: none;
+    border: none;
+    padding: 6px 14px;
+    margin-top: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #092c3e;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#switch:checked ~ .outer .details button{
+    background: #fff;
+    color: #092c3e;
+}
+
+
+.details button:hover{
+    transform: scale(0.97);
+}
+
+.content .details .media-icons{
+    position: absolute;
+    bottom: 16px;
+    right: 15px;
+}
+
+.details .media-icons a{
+    display: inline-flex;
+    color: #092c3e;
+    text-decoration: none;
+    margin: 0 4px;
+    opacity: 0.7;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+}
+
+#switch:checked ~ .outer .media-icons a{
+    color: #fff;
+    opacity: 1;
+}
+
+.details .media-icons a:hover{
+    opacity: 1;
+    transform: scale(1.14);
+}
+
+#switch:checked ~ .outer .media-icons a:hover{
+    opacity: 0.8;
+}
+
+#switch {
+    display: none;
+}
